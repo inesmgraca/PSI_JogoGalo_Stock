@@ -18,6 +18,7 @@ namespace JogoGalo_ScoreBoard
         public Game()
         {
             InitializeComponent();
+            Startup();
         }
 
         private void Startup()
@@ -90,11 +91,6 @@ namespace JogoGalo_ScoreBoard
                 }
             }
 
-        }
-
-        private void btnIniciar_Click(object sender, EventArgs e)
-        {
-            Startup();
         }
     }
 }

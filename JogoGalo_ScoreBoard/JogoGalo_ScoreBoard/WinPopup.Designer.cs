@@ -31,7 +31,7 @@ namespace JogoGalo_ScoreBoard
         {
             this.lblWinPlayer = new System.Windows.Forms.Label();
             this.lblText = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,12 +56,12 @@ namespace JogoGalo_ScoreBoard
             this.lblText.TabIndex = 1;
             this.lblText.Text = "Write your name to save your win!";
             // 
-            // textBox1
+            // txtPlayerName
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 23);
-            this.textBox1.TabIndex = 2;
+            this.txtPlayerName.Location = new System.Drawing.Point(30, 95);
+            this.txtPlayerName.Name = "txtPlayerName";
+            this.txtPlayerName.Size = new System.Drawing.Size(240, 23);
+            this.txtPlayerName.TabIndex = 2;
             // 
             // btnOK
             // 
@@ -90,7 +90,7 @@ namespace JogoGalo_ScoreBoard
             this.ClientSize = new System.Drawing.Size(434, 146);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.lblWinPlayer);
             this.Font = new System.Drawing.Font("Arial Nova Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,7 +109,7 @@ namespace JogoGalo_ScoreBoard
 
         private System.Windows.Forms.Label lblWinPlayer;
         private System.Windows.Forms.Label lblText;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPlayerName;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
     }
