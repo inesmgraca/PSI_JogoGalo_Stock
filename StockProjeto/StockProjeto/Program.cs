@@ -16,7 +16,7 @@ namespace StockProjeto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new FrmMain());
         }
     }
 }
