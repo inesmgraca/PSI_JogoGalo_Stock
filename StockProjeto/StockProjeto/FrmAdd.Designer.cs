@@ -88,7 +88,7 @@ namespace StockProjeto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 516);
+            this.ClientSize = new System.Drawing.Size(459, 516);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
@@ -97,8 +97,8 @@ namespace StockProjeto
             this.Font = new System.Drawing.Font("Arial Nova Light", 12F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(480, 555);
-            this.MinimumSize = new System.Drawing.Size(480, 555);
+            this.MaximumSize = new System.Drawing.Size(475, 555);
+            this.MinimumSize = new System.Drawing.Size(475, 555);
             this.Name = "FrmAdd";
             this.Text = "Adicionar Produto";
             this.ResumeLayout(false);
