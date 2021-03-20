@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -64,13 +57,22 @@ namespace StockProjeto
                             cmd.Parameters.AddWithValue("@codigo", txtCodigo.Text);
                             cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
 
-                            cmd.ExecuteNonQuery();
-                            cmd.Dispose();
+                            var adicionar = cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("O produto foi adicionado.", "Sucesso!", MessageBoxButtons.OK);
+                            if (adicionar == 1)
+                                MessageBox.Show("O produto foi adicionado.", "Sucesso!", MessageBoxButtons.OK);
+                            else
+                                MessageBox.Show("Houve um erro ao adicionar.", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            db.Close();
+                            db.Dispose();
                             Close();
                         }
                     }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Mensagem de erro: " + ex.Message, "Erro de Base de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {

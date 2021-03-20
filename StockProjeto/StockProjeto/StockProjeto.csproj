@@ -141,6 +141,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -161,6 +162,7 @@
     <Content Include="imgs\ImgDelete.png" />
     <Content Include="imgs\ImgEdit.png" />
     <Content Include="imgs\ImgListStock.png" />
+    <None Include="imgs\ImgUpdate.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="icons\" />
