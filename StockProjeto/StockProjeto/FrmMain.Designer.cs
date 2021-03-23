@@ -158,8 +158,7 @@ namespace StockProjeto
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(650, 650);
             this.Name = "FrmMain";
-            this.Text = "Stock";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.Text = "Projeto Stock - Inês G. - TGPSI-19J";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StockProjeto
@@ -98,9 +91,7 @@ namespace StockProjeto
                         cmd.Parameters.AddWithValue("@codigo", txtCodigo.Text);
                         cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
 
-                        var editar = cmd.ExecuteNonQuery();
-
-                        if (editar == 1)
+                        if (cmd.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("O produto foi editado.", "Sucesso!", MessageBoxButtons.OK);
                             Close();

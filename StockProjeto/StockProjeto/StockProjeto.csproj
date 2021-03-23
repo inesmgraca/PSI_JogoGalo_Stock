@@ -158,14 +158,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icons\IconAdd.ico" />
+    <Content Include="icons\IconDelete.ico" />
+    <Content Include="icons\IconEdit.ico" />
+    <Content Include="icons\IconList.ico" />
+    <Content Include="icons\IconListStock.ico" />
+    <Content Include="icons\IconMain.ico" />
+    <Content Include="icons\IconMoveStock.ico" />
     <Content Include="imgs\ImgAdd.png" />
     <Content Include="imgs\ImgDelete.png" />
     <Content Include="imgs\ImgEdit.png" />
+    <Content Include="imgs\ImgList.png" />
     <Content Include="imgs\ImgListStock.png" />
-    <None Include="imgs\ImgUpdate.png" />
+    <Content Include="imgs\ImgMoveStock.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StockProjeto
@@ -76,6 +69,8 @@ namespace StockProjeto
         {
             if (MessageBox.Show("Tem a certeza que pretende editar este produto?", "Submeter?", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
+                var produtoID = 0;
+
                 var connString = System.Configuration.ConfigurationManager.ConnectionStrings["StockProjetoDB"].ConnectionString;
                 var db = new SqlConnection(connString);
 
@@ -85,12 +80,32 @@ namespace StockProjeto
                     var cmd = new SqlCommand();
                     cmd.Connection = db;
 
+                    cmd.CommandText = "select * from Produtos where Codigo=@codigo;";
+                    cmd.Parameters.AddWithValue("@codigo", txtCodigo.Text);
+
+                    var dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                            produtoID = (int)dr["ProdutoID"];
+                    }
+
+                    cmd = new SqlCommand();
+                    cmd.Connection = db;
+
+                    cmd.CommandText = "delete from MovimentoStock where ProdutoID=@produtoID;";
+                    cmd.Parameters.AddWithValue("@produtoID", produtoID);
+
+                    cmd.ExecuteNonQuery();
+
+                    cmd = new SqlCommand();
+                    cmd.Connection = db;
+
                     cmd.CommandText = "delete from Produtos where Codigo=@codigo;";
                     cmd.Parameters.AddWithValue("@codigo", txtCodigo.Text);
 
-                    var eliminar = cmd.ExecuteNonQuery();
-
-                    if (eliminar == 1)
+                    if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("O produto foi eliminado.", "Sucesso!", MessageBoxButtons.OK);
                         Close();

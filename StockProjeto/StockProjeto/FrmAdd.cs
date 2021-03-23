@@ -57,9 +57,7 @@ namespace StockProjeto
                             cmd.Parameters.AddWithValue("@codigo", txtCodigo.Text);
                             cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
 
-                            var adicionar = cmd.ExecuteNonQuery();
-
-                            if (adicionar == 1)
+                            if (cmd.ExecuteNonQuery() == 1)
                                 MessageBox.Show("O produto foi adicionado.", "Sucesso!", MessageBoxButtons.OK);
                             else
                                 MessageBox.Show("Houve um erro ao adicionar.", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -78,8 +76,6 @@ namespace StockProjeto
                 {
                     MessageBox.Show("Mensagem de erro: " + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                
             }
         }
     }
