@@ -1,1 +1,3 @@
-# PSI0819J_InesGraca_2219129
+# Jogo do Galo e Stock
+
+## Projetos em Windows Forms
